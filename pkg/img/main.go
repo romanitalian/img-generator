@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/golang/freetype/truetype"
-	"github.com/romanitalian/pixel.local/img-generator/pkg/colors"
+	"github.com/romanitalian/img-generator/pkg/colors"
 	"golang.org/x/image/font"
 	"golang.org/x/image/math/fixed"
 	"image"
@@ -16,28 +16,32 @@ import (
 	"strconv"
 )
 
-var (
-	imgW = 300
-	imgH = 300
+const (
+	imgColorDefault = "E5E5E5"
+	msgColorDefault = "AAAAAA"
+	imgWDefault     = 300
+	imgHDefault     = 300
 
-	imgColor = "E5E5E5"
-	msgColor = "AAAAAA"
-
-	fontSize         = 0
-	dpi      float64 = 72
-	fontfile         = "wqy-zenhei.ttf" // TODO вынести в конфиг
-	hinting          = "none"
+	fontSizeDefault         = 0
+	fontfileDefault         = "wqy-zenhei.ttf" // TODO вынести в конфиг
+	dpiDefault      float64 = 72
+	hintingDefault          = "none"
 )
 
 // TODO добавить конструктор
 
 func addLabel(img *image.RGBA, imgW, imgH int, msg string, msgFontSize int, msgColor colors.Hex) {
+	var (
+		fontFile = fontfileDefault
+		dpi      = dpiDefault
+		hinting  = hintingDefault
+	)
 	h := font.HintingNone
 	switch hinting {
 	case "full":
 		h = font.HintingFull
 	}
-	fontBytes, err := ioutil.ReadFile(fontfile)
+	fontBytes, err := ioutil.ReadFile(fontFile)
 	if err != nil {
 		log.Println(err)
 		return
@@ -87,7 +91,14 @@ func GenerateFavicon() *bytes.Buffer {
 
 // TODO принимать интерфейс пакета. Заполнять входные значения извне.
 func Generate(urlPart []string) *bytes.Buffer {
-	var err error
+	var (
+		err      error
+		imgColor = imgColorDefault
+		msgColor = msgColorDefault
+		imgW     = imgWDefault
+		imgH     = imgHDefault
+		fontSize = fontSizeDefault
+	)
 
 	msg := ""
 	// TODO парсить urlPart в отдельном методе, в этом же методе заполнять структуру и возвращать её

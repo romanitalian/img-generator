@@ -2,8 +2,8 @@ package server
 
 import (
 	"bytes"
-	"github.com/romanitalian/pixel.local/img-generator/config"
-	"github.com/romanitalian/pixel.local/img-generator/pkg/img"
+	"github.com/romanitalian/img-generator/config"
+	"github.com/romanitalian/img-generator/pkg/img"
 	"log"
 	"net/http"
 	"os"

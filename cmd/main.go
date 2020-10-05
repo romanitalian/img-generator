@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"github.com/romanitalian/pixel.local/img-generator/config"
-	"github.com/romanitalian/pixel.local/img-generator/internal/server"
+	"github.com/romanitalian/img-generator/config"
+	"github.com/romanitalian/img-generator/internal/server"
 	"log"
 )
 
