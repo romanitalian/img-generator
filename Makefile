@@ -1,14 +1,9 @@
 .PHONY: build
 build:
-	rm -rf _build && mkdir _build && go build -o _build/img_generator -v ./cmd
+	rm -rf build && mkdir build && go build -o build/img_generator -v ./cmd
 
-.PHONY: build
+.PHONY: run
 run:
-	go run ./cmd
+	go run cmd/main.go
 
-.PHONY: clear
-clear:
-	rm -rf _build
-
-
-.DEFAULT_GOAL := build
+.DEFAUL_GOAL := build

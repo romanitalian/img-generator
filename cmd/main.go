@@ -2,18 +2,17 @@ package main
 
 import (
 	"flag"
-	"github.com/romanitalian/img-generator/config"
-	"github.com/romanitalian/img-generator/internal/server"
+	"github.com/romanitalian/img-generate/configs"
+	"github.com/romanitalian/img-generate/internal/server"
 	"log"
 )
 
-var confPath = flag.String("config-file", "./config/.env", "Path to config file.")
+var confPath = flag.String("conf-path", "./configs/.env", "Path to config env.")
 
 func main() {
-	conf, err := config.New(*confPath)
+	conf, err = configs.New(*confPath)
 	if err != nil {
 		log.Fatalln(err)
 	}
-
 	server.Run(conf)
 }
