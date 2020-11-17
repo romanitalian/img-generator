@@ -10,7 +10,7 @@ import (
 var confPath = flag.String("conf-path", "./configs/.env", "Path to config env.")
 
 func main() {
-	conf, err = configs.New(*confPath)
+	conf, err := configs.New(*confPath)
 	if err != nil {
 		log.Fatalln(err)
 	}
