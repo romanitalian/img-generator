@@ -37,13 +37,17 @@ func faviconHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func imgHandler(w http.ResponseWriter, r *http.Request) {
-	buffer, err := img.Generate(strings.Split(r.URL.Path, "/"))
+	path := strings.TrimPrefix(r.URL.Path, "/img")
+	buffer, err := img.Generate(strings.Split(path, "/"))
 	if err != nil {
 		log.Println(err)
 	}
 	rendImg(w, buffer)
 }
 
+func mainHandler(w http.ResponseWriter, r *http.Request) {
+	rend(w, "OK")
+}
 func pingHandler(w http.ResponseWriter, r *http.Request) {
 	rend(w, "PONG")
 }
@@ -52,7 +56,8 @@ func robotsHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func Run(conf configs.ConfI) {
-	http.HandleFunc("/", imgHandler)
+	http.HandleFunc("/", mainHandler)
+	http.HandleFunc("/img/", imgHandler)
 	http.HandleFunc("/favicon.ico", faviconHandler)
 	http.HandleFunc("/ping", pingHandler)
 	http.HandleFunc("/robots.txt", robotsHandler)
