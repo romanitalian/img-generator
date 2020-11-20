@@ -1,74 +1,72 @@
 package server
 
 import (
-	"bytes"
+	"github.com/buaazp/fasthttprouter"
 	"github.com/romanitalian/img-generate/configs"
-	"github.com/romanitalian/img-generate/pkg/img"
+
+	"github.com/valyala/fasthttp"
+	"github.com/valyala/fasthttp/reuseport"
 	"log"
-	"net/http"
 	"os"
 	"os/signal"
-	"strconv"
-	"strings"
 	"syscall"
 )
 
-func rend(w http.ResponseWriter, msg string) {
-	_, err := w.Write([]byte(msg))
+func newServer(conf configs.Configer) *server {
+	rtr := fasthttprouter.New()
+	return &server{
+		HTTPServer: &fasthttp.Server{
+			Handler:            rtr.Handler,
+			ReadTimeout:        conf.ReadTimeout(),
+			WriteTimeout:       conf.WriteTimeout(),
+			MaxConnsPerIP:      conf.MaxConnsPerIP(),
+			MaxRequestsPerConn: conf.MaxRequestsPerConn(),
+		},
+		router: rtr,
+	}
+}
+
+type server struct {
+	HTTPServer *fasthttp.Server
+	router     *fasthttprouter.Router
+}
+
+func Run(conf configs.Configer) {
+	srvr := newServer(conf)
+	srvr.router.GET("/img/*params", imgHandler)
+	srvr.router.GET("/favicon.ico", faviconHandler)
+	srvr.router.GET("/ping", pingHandler)
+	srvr.router.GET("/robots.txt", robotsHandler)
+	srvr.router.GET("/user.json", userHandler)
+
+	ln, err := reuseport.Listen("tcp4", "127.0.0.1:"+conf.Port())
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
-}
-
-func rendImg(w http.ResponseWriter, buffer *bytes.Buffer) {
-	w.Header().Set("Content-Type", "image/jpeg")
-	w.Header().Set("Content-Length", strconv.Itoa(len(buffer.Bytes())))
-	if _, err := w.Write(buffer.Bytes()); err != nil {
-		log.Println(err)
-	}
-}
-
-func faviconHandler(w http.ResponseWriter, r *http.Request) {
-	buffer, err := img.GenerateFavicon()
-	if err != nil {
-		log.Println(err)
-	}
-	rendImg(w, buffer)
-}
-
-func imgHandler(w http.ResponseWriter, r *http.Request) {
-	buffer, err := img.Generate(strings.Split(r.URL.Path, "/"))
-	if err != nil {
-		log.Println(err)
-	}
-	rendImg(w, buffer)
-}
-
-func pingHandler(w http.ResponseWriter, r *http.Request) {
-	rend(w, "PONG")
-}
-func robotsHandler(w http.ResponseWriter, r *http.Request) {
-	rend(w, "robots")
-}
-
-func Run(conf configs.ConfI) {
-	http.HandleFunc("/", imgHandler)
-	http.HandleFunc("/favicon.ico", faviconHandler)
-	http.HandleFunc("/ping", pingHandler)
-	http.HandleFunc("/robots.txt", robotsHandler)
-
-	sigs := make(chan os.Signal, 1)
-	signal.Notify(sigs, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
-
+	graceful := NewGracefulListener(ln, conf.GracefullListenerMaxWaitTimeOut())
+	listenErr := make(chan error, 1)
 	go func() {
-		log.Println("Server staring ...")
-		if err := http.ListenAndServe(":" + conf.GetPort(), nil); err != nil {
-			log.Fatalln(err)
-		}
+		listenErr <- srvr.HTTPServer.Serve(graceful)
 	}()
 
-	signalValue := <-sigs
-	signal.Stop(sigs)
+	osSignals := make(chan os.Signal, 1)
+	signal.Notify(osSignals, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
-	log.Println("stop signal: ", signalValue)
+	for {
+		select {
+		case err := <-listenErr:
+			if err != nil {
+				log.Fatalf("listener error: %s", err)
+			}
+			log.Printf("Server stopped. Error to stop: %v\n", err)
+			os.Exit(0)
+		case sig := <-osSignals:
+			log.Printf("Shutdown signal (app port: %s).\n", conf.Port())
+			if err := graceful.Close(); err != nil {
+				log.Fatal(err)
+			}
+			log.Printf("Server stopped. Signal to stop: %v\n", sig)
+			os.Exit(0)
+		}
+	}
 }
