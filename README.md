@@ -1,20 +1,57 @@
-# img-generator
+# Image Generator
 
-[http://localhost:8080](http://localhost:8080)
+## Purpose:
 
-[http://localhost:8080/600/200](http://localhost:8080/600/200)
+This project provides a RESTful API for generating images dynamically based on various parameters. The API allows users to specify the image dimensions, background color, text content, text color, and font size to create customized images.
 
-[http://localhost:8080/1500/1700/1D7373/Привет с Марса/FFFFFF/100](http://localhost:8080/1500/1700/1D7373/%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%20%D1%81%20%D0%9C%D0%B0%D1%80%D1%81%D0%B0/FFFFFF/100)
+## Features:
 
-[http://localhost:8080/1500/1700/1D7373/Привет с Марса/FFFFFF/100](http://localhost:8080/1500/1700/1D7373/%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%20%D1%81%20%D0%9C%D0%B0%D1%80%D1%81%D0%B0/FFFFFF/100)
+- Dynamic image generation: Creates images on-the-fly based on user-provided parameters.
+- Customizable parameters: Allows users to specify dimensions, colors, text, and font size.
+- Flexible API endpoints: Offers multiple endpoints for different image sizes and parameters.
+- Performance optimization: Leverages efficient image generation techniques for optimal performance.
 
-[http://localhost:8080/600/150/1D7373/Привет с Марса/FFFFFF](http://localhost:8080/600/150/1D7373/%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%20%D1%81%20%D0%9C%D0%B0%D1%80%D1%81%D0%B0/FFFFFF)
 
-[http://localhost:8080/600/150/1D7373/Lorem/FFFFFF](http://localhost:8080/600/150/1D7373/Lorem/FFFFFF)
+## Usage:
+
+To generate an image, send an HTTP GET request to the appropriate API endpoint, providing the desired parameters in the URL query string. For example:
+
+```
+http://localhost:8080/img/800/250/1D7373/Hello%20World/FFFFFF/100
+```
+
+This request will generate an image with the following specifications:
+
+- Width: 800 pixels
+- Height: 250 pixels
+- Background color: #1D7373
+- Text: "Hello World"
+- Text color: #FFFFFF
+- Font size: 100
+
+![alt text](./docs/imgs/example-hello-world.png)
 
 
-```shell script
- wrk http://localhost:8080/100/100
+```
+http://localhost:8080/img/500/450
+```
+
+![alt text](./docs/imgs/example-simple.png)
+
+## Performance:
+
+The API has been designed with performance in mind. Benchmark tests using wrk have demonstrated high request rates and low latency, even under load.
+
+## Additional Considerations:
+
+Error handling: The API should implement appropriate error handling mechanisms to provide informative responses for invalid requests.
+Security: Consider implementing security measures to protect against potential vulnerabilities, such as input validation and rate limiting.
+Scalability: If the API is expected to handle a large number of requests, explore options for scaling and load balancing.
+
+## Benchmarking:
+
+```bash
+$ wrk http://localhost:8080/img/100/100
 Running 10s test @ http://localhost:8080/100/100
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -25,8 +62,8 @@ Requests/sec:    450.64
 Transfer/sec:    473.53KB
 ```
 
-```shell script
- wrk http://localhost:8080/1/1
+```bash
+$ wrk http://localhost:8080/img/1/1
 Running 10s test @ http://localhost:8080/1/1
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -38,8 +75,8 @@ Transfer/sec:    358.53KB
 ```
 
 
-```shell script
-wrk http://localhost:8080/ping
+```bash
+$ wrk http://localhost:8080/ping
 Running 10s test @ http://localhost:8080/ping
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
