@@ -1,5 +1,78 @@
 # Image Generator
 
+A Go application for image generation and processing.
+
+## Prerequisites
+
+- Go 1.21 or higher
+- Make
+- golangci-lint (optional, for development)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/romanitalian/img-generator.git
+cd img-generator
+```
+
+2. Install dependencies:
+```bash
+make deps
+```
+
+3. (Optional) Install linter:
+```bash
+make lint-install
+```
+
+## Usage
+
+### Development
+
+Build the application:
+```bash
+make build
+```
+
+Run the application:
+```bash
+make run
+```
+
+### Production
+
+Build production version:
+```bash
+make build-prod
+```
+
+The binary will be available in the `build` directory.
+
+## Development
+
+### Available Commands
+
+- `make help` - Show available commands
+- `make build` - Build development version
+- `make build-prod` - Build production version
+- `make run` - Run the application
+- `make test` - Run tests
+- `make lint` - Run linter
+- `make fmt` - Format code
+- `make clean` - Clean build directory
+
+### Code Quality
+
+The project uses:
+- golangci-lint for code quality checks
+- go fmt for code formatting
+- go test for testing
+
+## License
+
+MIT
+
 ## Purpose:
 
 This project provides a RESTful API for generating images dynamically based on various parameters. The API allows users to specify the image dimensions, background color, text content, text color, and font size to create customized images.
@@ -52,7 +125,7 @@ Scalability: If the API is expected to handle a large number of requests, explor
 
 ```bash
 $ wrk http://localhost:8080/img/100/100
-Running 10s test @ http://localhost:8080/100/100
+Running 10s test @ http://localhost:8080/img/100/100
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
     Latency    23.47ms   15.31ms 134.09ms   79.14%
@@ -64,7 +137,7 @@ Transfer/sec:    473.53KB
 
 ```bash
 $ wrk http://localhost:8080/img/1/1
-Running 10s test @ http://localhost:8080/1/1
+Running 10s test @ http://localhost:8080/img/1/1
   2 threads and 10 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
     Latency    19.57ms   10.71ms  85.48ms   71.96%
