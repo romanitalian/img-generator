@@ -6,6 +6,8 @@ SHELL:=bash
 VERSION ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo "dev")
 BUILD_TIME ?= $(shell date -u '+%Y-%m-%d_%H:%M:%S')
 LDFLAGS := -w -s -X main.version=$(VERSION) -X main.buildTime=$(BUILD_TIME)
+DOCKER_IMAGE_NAME ?= img-generator
+DOCKER_TAG ?= latest
 
 ##@ Help
 help: ## Show this help message
@@ -55,3 +57,16 @@ lint: ## Run linter with full output
 .PHONY: fmt
 fmt: ## Format code
 	go fmt ./...
+
+##@ Docker
+.PHONY: docker-build
+docker-build: ## Build Docker image
+	docker build -t $(DOCKER_IMAGE_NAME):$(DOCKER_TAG) .
+
+.PHONY: docker-run
+docker-run: ## Run Docker container
+	docker run -p 8080:8080 $(DOCKER_IMAGE_NAME):$(DOCKER_TAG)
+
+.PHONY: docker-clean
+docker-clean: ## Remove Docker image
+	docker rmi $(DOCKER_IMAGE_NAME):$(DOCKER_TAG)
