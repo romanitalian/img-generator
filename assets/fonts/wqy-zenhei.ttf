@@ -37,12 +37,12 @@
     <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-cba26849680f.css" />
     <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/global-d579beef0491.css" />
     <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/github-864568fbf430.css" />
-  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/repository-4fce88777fa8.css" />
+  
 
   
 
 
-  <script type="application/json" id="client-env">{"locale":"en","featureFlags":["alternate_user_config_repo","codespaces_prebuild_region_target_update","contentful_lp_flex_features_actions","contentful_lp_flex_features_code_review","contentful_lp_flex_features_code_search","contentful_lp_flex_features_codespaces","contentful_lp_flex_features_discussions","contentful_lp_flex_features_issues","contentful_lp_footnotes","copilot_chat_custom_instructions","copilot_chat_repo_custom_instructions_preview","copilot_chat_vision_in_claude","copilot_duplicate_thread","copilot_free_to_paid_telem","copilot_immersive_issue_preview","copilot_new_immersive_references_ui","copilot_no_floating_button","copilot_read_shared_conversation","copilot_task_oriented_assistive_prompts","copilot_topics_as_references","copilot_ui_refs","direct_to_salesforce","dotcom_chat_client_side_skills","ghost_pilot_confidence_truncation_25","ghost_pilot_confidence_truncation_40","github_models_o3_mini_streaming","insert_before_patch","issues_dashboard_no_redirects","issues_react_blur_item_picker_on_close","issues_react_create_milestone","issues_react_dashboard_save_query_refresh","issues_react_prohibit_title_fallback","issues_react_remove_placeholders","lifecycle_label_name_updates","link_contact_sales_swp_marketo","marketing_pages_search_explore_provider","memex_mwl_filter_field_delimiter","nonreporting_relay_graphql_status_codes","primer_react_css_modules_ga","primer_react_select_panel_with_modern_action_list","remove_child_patch","report_hydro_web_vitals","sample_network_conn_type","site_proxima_australia_update","swp_enterprise_contact_form","use_paginated_repo_picker_cost_center_form","viewscreen_sandbox"]}</script>
+  <script type="application/json" id="client-env">{"locale":"en","featureFlags":["alternate_user_config_repo","codespaces_prebuild_region_target_update","contentful_lp_flex_features_actions","contentful_lp_flex_features_code_review","contentful_lp_flex_features_code_search","contentful_lp_flex_features_codespaces","contentful_lp_flex_features_discussions","contentful_lp_flex_features_issues","contentful_lp_footnotes","copilot_chat_custom_instructions","copilot_chat_repo_custom_instructions_preview","copilot_chat_vision_in_claude","copilot_duplicate_thread","copilot_free_to_paid_telem","copilot_immersive_issue_preview","copilot_new_immersive_references_ui","copilot_no_floating_button","copilot_read_shared_conversation","copilot_task_oriented_assistive_prompts","copilot_topics_as_references","copilot_ui_refs","direct_to_salesforce","dotcom_chat_client_side_skills","ghost_pilot_confidence_truncation_25","ghost_pilot_confidence_truncation_40","github_models_o3_mini_streaming","insert_before_patch","issues_dashboard_no_redirects","issues_react_blur_item_picker_on_close","issues_react_create_milestone","issues_react_dashboard_save_query_refresh","issues_react_prohibit_title_fallback","issues_react_remove_placeholders","lifecycle_label_name_updates","link_contact_sales_swp_marketo","marketing_pages_search_explore_provider","memex_mwl_filter_field_delimiter","nonreporting_relay_graphql_status_codes","primer_react_css_modules_ga","primer_react_select_panel_with_modern_action_list","remove_child_patch","sample_network_conn_type","site_proxima_australia_update","swp_enterprise_contact_form","use_paginated_repo_picker_cost_center_form","viewscreen_sandbox"]}</script>
 <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/wp-runtime-1ce0c7c833b5.js"></script>
 <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_oddbird_popover-polyfill_dist_popover-fn_js-81211bd82278.js"></script>
 <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_stacktrace-parser_dist_s-1d3d52-4be8ffe9a34a.js"></script>
@@ -83,22 +83,21 @@
   <meta name="route-pattern" content="/:user_id/:repository/raw/*name(/*path)" data-turbo-transient>
   <meta name="route-controller" content="blob" data-turbo-transient>
   <meta name="route-action" content="raw" data-turbo-transient>
-  <meta name="fetch-nonce" content="051bbbeb-2037-7456-f325-f6f41e15052c">
+  <meta name="fetch-nonce" content="c6c3bea4-3335-ddec-57f9-233698949c49">
 
     
   <meta name="current-catalog-service-hash" content="f3abb0cc802f3d7b95fc8762b94bdcb13bf39634c40c357301c4aa1d67a256fb">
 
 
-  <meta name="request-id" content="AC8A:CB002:776E17:79EE5F:681CA48F" data-turbo-transient="true" /><meta name="html-safe-nonce" content="cb157ce87ec0975afa8d86877d4a5879940468f1f71a89c19f0b17e8f43af712" data-turbo-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6bnVsbCwicmVxdWVzdF9pZCI6IkFDOEE6Q0IwMDI6Nzc2RTE3Ojc5RUU1Rjo2ODFDQTQ4RiIsInZpc2l0b3JfaWQiOiI1NDY3NzcyNDY5NDE0NTAzNTY3IiwicmVnaW9uX2VkZ2UiOiJmcmEiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-turbo-transient="true" /><meta name="visitor-hmac" content="b41ce09aa7781367491be246d6249c3c6ca4b3fc2f32208c3b5e84321d7b6ff5" data-turbo-transient="true" />
+  <meta name="request-id" content="EB07:BBB6C:30DA22:31D259:681CB161" data-turbo-transient="true" /><meta name="html-safe-nonce" content="7f0d8c5148f8a3bda46102b485d94ce462ee7fb1bf9370de4e8f62a027082f6c" data-turbo-transient="true" /><meta name="visitor-payload" content="eyJyZWZlcnJlciI6bnVsbCwicmVxdWVzdF9pZCI6IkVCMDc6QkJCNkM6MzBEQTIyOjMxRDI1OTo2ODFDQjE2MSIsInZpc2l0b3JfaWQiOiI3OTMyNTcwMzU4NTMyMzIxNjMzIiwicmVnaW9uX2VkZ2UiOiJmcmEiLCJyZWdpb25fcmVuZGVyIjoiaWFkIn0=" data-turbo-transient="true" /><meta name="visitor-hmac" content="87a6bdcdcc59522a0aecc502c5fe4b0616f53a2c4669ba0786490ac5feca248a" data-turbo-transient="true" />
 
 
-    <meta name="hovercard-subject-tag" content="repository:301140563" data-turbo-transient>
 
 
   <meta name="github-keyboard-shortcuts" content="copilot" data-turbo-transient="true" />
   
 
-  <meta name="selected-link" value="/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf" data-turbo-transient>
+  <meta name="selected-link" value="/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf" data-turbo-transient>
   <link rel="assets" href="https://github.githubassets.com/">
 
     <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
@@ -126,7 +125,7 @@
 
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <meta property="fb:app_id" content="1401488693436528">
-    <meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf" />
+    <meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf" />
 
       <meta property="og:url" content="https://github.com">
   <meta property="og:site_name" content="GitHub">
@@ -181,7 +180,7 @@
 
 
 
-      <link rel="canonical" href="https://github.com/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf" data-turbo-transient>
+      <link rel="canonical" href="https://github.com/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf" data-turbo-transient>
 
 
     <meta name="turbo-body-classes" content="logged-out env-production page-responsive min-height-full d-flex flex-column">
@@ -191,7 +190,7 @@
 
   <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
 
-  <meta name="release" content="e1f073e06b3998b41e0e7c2c4176472f3c4ba349">
+  <meta name="release" content="abe1b1a622cc9e1ded5f0e1811563184ba80dfc8">
 
   <link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000">
   <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
@@ -278,9 +277,9 @@
 
       <div class="flex-1 flex-order-2 text-right">
           <a
-            href="/login?return_to=https%3A%2F%2Fgithub.com%2Fromanitalian%2Fimg-generator%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf"
+            href="/login?return_to=https%3A%2F%2Fgithub.com%2Fromanitalian%2Fimg-generate%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf"
             class="HeaderMenu-link HeaderMenu-button d-inline-flex d-lg-none flex-order-1 f5 no-underline border color-border-default rounded-2 px-2 py-1 color-fg-inherit js-prevent-focus-on-mobile-nav"
-            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="5986a4374e9866d8f5f27ea9467dff5f141e231c730b988144774cb58c55ef07"
+            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="e457528389451bab845e556228dc40bdbb03f8eb874ea4ee1e910dcdea11f765"
             data-analytics-event="{&quot;category&quot;:&quot;Marketing nav&quot;,&quot;action&quot;:&quot;click to Sign in&quot;,&quot;label&quot;:&quot;ref_page:Marketing;ref_cta:Sign in;ref_loc:Header&quot;}"
           >
             Sign in
@@ -857,7 +856,7 @@
                 
 
 
-<qbsearch-input class="search-input" data-scope="owner:romanitalian" data-custom-scopes-path="/search/custom_scopes" data-delete-custom-scopes-csrf="d8TK22ip1T_T2TuM8YhiQhTMq7uJysUHW83e9FghZp8r-mhmQRt6VI3bJsXz2zgSDWxJ4cMOouEsHQyUX9igpw" data-max-custom-scopes="10" data-header-redesign-enabled="false" data-initial-value="" data-blackbird-suggestions-path="/search/suggestions" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" data-current-repository="" data-current-org="" data-current-owner="" data-logged-in="false" data-copilot-chat-enabled="false" data-nl-search-enabled="false" data-retain-scroll-position="true">
+<qbsearch-input class="search-input" data-scope="owner:romanitalian" data-custom-scopes-path="/search/custom_scopes" data-delete-custom-scopes-csrf="qn0k8eYzpS-Xvdx5te2IruIEh8-KOm4ECZWdYGeyqtbBDjpTjVu_CWK5o68oWGw1HdfB_C3s6ES_4aCyAPiQdw" data-max-custom-scopes="10" data-header-redesign-enabled="false" data-initial-value="" data-blackbird-suggestions-path="/search/suggestions" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" data-current-repository="" data-current-org="" data-current-owner="" data-logged-in="false" data-copilot-chat-enabled="false" data-nl-search-enabled="false" data-retain-scroll-position="true">
   <div
     class="search-input-container search-with-dialog position-relative d-flex flex-row flex-items-center mr-4 rounded"
     data-action="click:qbsearch-input#searchInputContainerClicked"
@@ -922,7 +921,7 @@
           ></div>
           <div class="QueryBuilder-InputWrapper">
             <div aria-hidden="true" class="QueryBuilder-Sizer" data-target="query-builder.sizer"></div>
-            <input id="query-builder-test" name="query-builder-test" value="" autocomplete="off" type="text" role="combobox" spellcheck="false" aria-expanded="false" aria-describedby="validation-c05e701b-04e7-4e34-8cd3-e99124a9c271" data-target="query-builder.input" data-action="
+            <input id="query-builder-test" name="query-builder-test" value="" autocomplete="off" type="text" role="combobox" spellcheck="false" aria-expanded="false" aria-describedby="validation-7686d14d-7aee-41ff-a4e9-61dd7f2b2358" data-target="query-builder.input" data-action="
           input:query-builder#inputChange
           blur:query-builder#inputBlur
           keydown:query-builder#inputKeydown
@@ -1159,7 +1158,7 @@
                   id="query-builder-test-results"
                 ></ul>
         </div>
-      <div class="FormControl-inlineValidation" id="validation-c05e701b-04e7-4e34-8cd3-e99124a9c271" hidden="hidden">
+      <div class="FormControl-inlineValidation" id="validation-7686d14d-7aee-41ff-a4e9-61dd7f2b2358" hidden="hidden">
         <span class="FormControl-inlineValidation--visual">
           <svg aria-hidden="true" height="12" viewBox="0 0 12 12" version="1.1" width="12" data-view-component="true" class="octicon octicon-alert-fill">
     <path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
@@ -1200,7 +1199,7 @@
   
 </div>
       <scrollable-region data-labelled-by="feedback-dialog-title">
-        <div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="code-search-feedback-form" data-turbo="false" action="/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="Z3PQiNWC7OzsebJSNoo-ZWcINrbpqInia1W2499XBhZsKsLUUdWjX5NJdRxwO2UiBAAsCxWgMs8gHIBSNvMxnA" />
+        <div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="code-search-feedback-form" data-turbo="false" action="/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="0-vnGih93eM0a230Y4lrIWG87fk5ErNk_pG0Z3CGnja8BEyBT_jx4PiGeuzNLoWisVNi4PfEXafhW5BgQBjn0A" />
           <p>We read every piece of feedback, and take your input very seriously.</p>
           <textarea name="feedback" class="form-control width-full mb-2" style="height: 120px" id="feedback"></textarea>
           <input name="include_email" id="include_email" aria-label="Include my email address so I can be contacted" class="form-control mr-2" type="checkbox">
@@ -1238,7 +1237,7 @@
         <div data-view-component="true" class="Overlay-body">        <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
 
         <div hidden class="create-custom-scope-form" data-target="custom-scopes.createCustomScopeForm">
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="custom-scopes-dialog-form" data-turbo="false" action="/search/custom_scopes" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="nIPPfr2v8x3lfXFmaBKQfQKF2oI4F_71vx8VR5Qra8mk_9-uCN2Y7gryRsurBqqXXgh1QcaT9MZeEUEAPmyljA" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="custom-scopes-dialog-form" data-turbo="false" action="/search/custom_scopes" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="_k_-ggGjOwZh_nEs2G5DcmMhKUa4TvXZK73WWHZutZXT4nnS7VVON2Yu6pQtGPMst529w1lpl7OxZ8_Y29ITdA" />
           <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
 
           <input type="hidden" id="custom_scope_id" name="custom_scope_id" data-target="custom-scopes.customScopesIdField">
@@ -1256,7 +1255,7 @@
                 placeholder="github-ruby"
                 required
                 maxlength="50">
-              <input type="hidden" value="UxPZrtIP604IZ5noGKavxbruNyTHxr2zpmktGtQiyfWE2MpfV7Fh8HBt-33kiotIokZObNAY4GDMOclQRADGug" data-csrf="true" />
+              <input type="hidden" value="h4FFKj1aj77dVp0RqlKm4H-cCLHUnPloE4WYSlirIHhKbqDuz6mj_z11kJR1ikk3uHZlU_Xaa4C08diWQdgVxQ" data-csrf="true" />
             </auto-check>
           </div>
 
@@ -1298,10 +1297,10 @@
 
             <div class="position-relative HeaderMenu-link-wrap d-lg-inline-block">
               <a
-                href="/login?return_to=https%3A%2F%2Fgithub.com%2Fromanitalian%2Fimg-generator%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf"
+                href="/login?return_to=https%3A%2F%2Fgithub.com%2Fromanitalian%2Fimg-generate%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf"
                 class="HeaderMenu-link HeaderMenu-link--sign-in HeaderMenu-button flex-shrink-0 no-underline d-none d-lg-inline-flex border border-lg-0 rounded rounded-lg-0 px-2 py-1"
                 style="margin-left: 12px;"
-                data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="5986a4374e9866d8f5f27ea9467dff5f141e231c730b988144774cb58c55ef07"
+                data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="e457528389451bab845e556228dc40bdbb03f8eb874ea4ee1e910dcdea11f765"
                 data-analytics-event="{&quot;category&quot;:&quot;Marketing nav&quot;,&quot;action&quot;:&quot;click to go to homepage&quot;,&quot;label&quot;:&quot;ref_page:Marketing;ref_cta:Sign in;ref_loc:Header&quot;}"
               >
                 Sign in
@@ -1311,7 +1310,7 @@
     <h4 data-view-component="true" class="color-fg-default mb-2">                    Sign in to GitHub
 </h4>
                         
-<!-- '"` --><!-- </textarea></xmp> --></option></form><form data-turbo="false" action="/session" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="p15jlpMn6bzKxnaMerrIQyxSI1X1BKNBsGH7WIwERBVOOJeYfjS3lL_KXdP811_uj74dJUR79NXxhbQgkLDS-Q" />  <input type="hidden" name="add_account" id="add_account" autocomplete="off" class="form-control" />
+<!-- '"` --><!-- </textarea></xmp> --></option></form><form data-turbo="false" action="/session" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="4rV1FxL_oyGBZWG1XQEwU-FEl5rr3O8QEo90tnaf-gtPOvj00RnzY8dg0SgULvb24iclMBdxoI7-Kzu5D5S5TQ" />  <input type="hidden" name="add_account" id="add_account" autocomplete="off" class="form-control" />
 
     <label for="login_field">
       Username or email address
@@ -1329,17 +1328,17 @@
 <input type="hidden" class="js-support" name="javascript-support" value="unknown">
 <input type="hidden" class="js-webauthn-support" name="webauthn-support" value="unknown">
 <input type="hidden" class="js-webauthn-iuvpaa-support" name="webauthn-iuvpaa-support" value="unknown">
-<input type="hidden" name="return_to" id="return_to" value="https://github.com/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf" autocomplete="off" class="form-control" />
+<input type="hidden" name="return_to" id="return_to" value="https://github.com/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf" autocomplete="off" class="form-control" />
 <input type="hidden" name="allow_signup" id="allow_signup" autocomplete="off" class="form-control" />
 <input type="hidden" name="client_id" id="client_id" autocomplete="off" class="form-control" />
 <input type="hidden" name="integration" id="integration" autocomplete="off" class="form-control" />
-<input type="text" name="required_field_46dc" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1746707599867" autocomplete="off" class="form-control" /><input type="hidden" name="timestamp_secret" value="bce2e7e2606bbce2e32dde2999f25b45254d5a7d63edffefba1d1ad4428cf3c4" autocomplete="off" class="form-control" />
+<input type="text" name="required_field_24e8" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1746710881678" autocomplete="off" class="form-control" /><input type="hidden" name="timestamp_secret" value="165b508248a26128a10bba4f1b56490c9262259494a369e74f30d93260c2cbab" autocomplete="off" class="form-control" />
 
     <input type="submit" name="commit" value="Sign in" class="btn btn-primary btn-block js-sign-in-button" data-disable-with="Signing in…" data-signin-label="Sign in" data-sso-label="Sign in with your identity provider" development="false" disable-emu-sso="false" />
   </div>
 </form>  <webauthn-status class="js-webauthn-login-emu-control">
         <div data-target="webauthn-status.partial" class="d-flex flex-justify-between flex-column mt-3 mb-0" hidden>
-          <a href="/login?passkey=true&amp;return_to=https%3A%2F%2Fgithub.com%2Fromanitalian%2Fimg-generator%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf" data-analytics-event="{&quot;category&quot;:&quot;passkey_404_login&quot;,&quot;action&quot;:&quot;clicked&quot;,&quot;label&quot;:null}" data-view-component="true" class="Button--link Button--medium Button">  <span class="Button-content">
+          <a href="/login?passkey=true&amp;return_to=https%3A%2F%2Fgithub.com%2Fromanitalian%2Fimg-generate%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf" data-analytics-event="{&quot;category&quot;:&quot;passkey_404_login&quot;,&quot;action&quot;:&quot;clicked&quot;,&quot;label&quot;:null}" data-view-component="true" class="Button--link Button--medium Button">  <span class="Button-content">
     <span class="Button-label">or sign in with a passkey</span>
   </span>
 </a>
@@ -1349,10 +1348,10 @@
 
 </div></div>            </div>
 
-              <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2Fromanitalian%2Fimg-generator%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf&amp;source=header"
+              <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2Fromanitalian%2Fimg-generate%2Fraw%2Fmain%2Fassets%2Ffonts%2Fwqy-zenhei.ttf&amp;source=header"
                 class="HeaderMenu-link HeaderMenu-link--sign-up HeaderMenu-button flex-shrink-0 d-flex d-lg-inline-flex no-underline border color-border-default rounded px-2 py-1"
-                data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="5986a4374e9866d8f5f27ea9467dff5f141e231c730b988144774cb58c55ef07"
-                data-analytics-event="{&quot;category&quot;:&quot;Sign up&quot;,&quot;action&quot;:&quot;click to sign up for account&quot;,&quot;label&quot;:&quot;ref_page:/romanitalian/img-generator/raw/main/assets/fonts/wqy-zenhei.ttf;ref_cta:Sign up;ref_loc:header logged out&quot;}"
+                data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="e457528389451bab845e556228dc40bdbb03f8eb874ea4ee1e910dcdea11f765"
+                data-analytics-event="{&quot;category&quot;:&quot;Sign up&quot;,&quot;action&quot;:&quot;click to sign up for account&quot;,&quot;label&quot;:&quot;ref_page:/romanitalian/img-generate/raw/main/assets/fonts/wqy-zenhei.ttf;ref_cta:Sign up;ref_loc:header logged out&quot;}"
               >
                 Sign up
               </a>
@@ -1374,10 +1373,10 @@
         <span class="js-stale-session-flash-signed-out" hidden>You signed out in another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
         <span class="js-stale-session-flash-switched" hidden>You switched accounts on another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
 
-    <button id="icon-button-b1cfb03b-aacf-4664-bd71-c4dce8d2463b" aria-labelledby="tooltip-4833e11e-689a-4e0c-a0af-c348cd994967" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium flash-close js-flash-close">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x Button-visual">
+    <button id="icon-button-e78c90e3-d391-4997-af2c-3c107d138387" aria-labelledby="tooltip-8ed9ffe9-1bc3-4060-89d8-54373b4757bd" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium flash-close js-flash-close">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x Button-visual">
     <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
 </svg>
-</button><tool-tip id="tooltip-4833e11e-689a-4e0c-a0af-c348cd994967" for="icon-button-b1cfb03b-aacf-4664-bd71-c4dce8d2463b" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Dismiss alert</tool-tip>
+</button><tool-tip id="tooltip-8ed9ffe9-1bc3-4060-89d8-54373b4757bd" for="icon-button-e78c90e3-d391-4997-af2c-3c107d138387" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Dismiss alert</tool-tip>
 
 
   
