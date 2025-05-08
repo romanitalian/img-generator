@@ -47,3 +47,4 @@ logs/
 *.temp
 tmp/
 temp/
+build/

@@ -12,7 +12,7 @@ import (
 	"github.com/romanitalian/img-generate/v2/pkg/logger"
 )
 
-var confPath = flag.String("conf-path", "./configs/.env", "Path to config env.")
+var confPath = flag.String("conf-path", ".env", "Path to config env.")
 
 func main() {
 	flag.Parse()
