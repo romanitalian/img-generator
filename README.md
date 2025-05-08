@@ -147,10 +147,15 @@ The service can be configured using environment variables:
 ### Available Make Commands
 
 - `make help` - Show available commands
-- `make build` - Build the application
+- `make deps` - Download dependencies
+- `make build` - Build the application (development)
+- `make build-prod` - Build the application (production)
 - `make run` - Run the application
 - `make test` - Run tests
 - `make clean` - Clean build artifacts
+- `make lint-install` - Install golangci-lint
+- `make lint` - Run linter with full output
+- `make fmt` - Format code
 - `make docker-build` - Build Docker image
 - `make docker-run` - Run Docker container
 - `make docker-clean` - Clean Docker resources
