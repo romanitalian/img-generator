@@ -14,7 +14,7 @@ import (
 const (
 	// Font paths
 	fontDir     = "assets/fonts"
-	defaultFont = "wqy-zenhei.ttf"
+	defaultFont = "NotoSans-Regular.ttf"
 
 	// Font settings
 	dpiDefault float64 = 72
@@ -47,11 +47,17 @@ func loadFont(ctx context.Context) (*truetype.Font, error) {
 
 			// Try to load from system fonts
 			systemFonts := []string{
-				"/System/Library/Fonts/Supplemental/Arial Unicode.ttf", // macOS
-				"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",      // Linux
-				"C:\\Windows\\Fonts\\arial.ttf",                        // Windows
+				"/System/Library/Fonts/Supplemental/Arial Unicode.ttf",    // macOS
+				"/System/Library/Fonts/Arial.ttf",                         // macOS alternative
+				"/System/Library/Fonts/Helvetica.ttc",                     // macOS alternative
+				"/Library/Fonts/Arial.ttf",                                // macOS user fonts
+				"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",         // Linux
+				"/usr/share/fonts/TTF/DejaVuSans.ttf",                     // Linux alternative
+				"/usr/share/fonts/truetype/liberation/LiberationSans.ttf", // Linux alternative
+				"C:\\Windows\\Fonts\\arial.ttf",                           // Windows
 			}
 
+			var lastErr error
 			for _, path := range systemFonts {
 				if _, err := os.Stat(path); err == nil {
 					log.Debug().Str("path", path).Msg("trying to load system font")
@@ -60,11 +66,16 @@ func loadFont(ctx context.Context) (*truetype.Font, error) {
 						log.Info().Str("path", path).Msg("successfully loaded system font")
 						break
 					}
+					lastErr = err
 				}
 			}
 
 			if fontBytes == nil {
-				err := fmt.Errorf("failed to load font: %v", err)
+				if lastErr != nil {
+					err = fmt.Errorf("failed to load any font, last error: %v", lastErr)
+				} else {
+					err = fmt.Errorf("no suitable fonts found in the system")
+				}
 				log.Error().Err(err).Msg("all font loading attempts failed")
 				return nil, err
 			}
@@ -74,7 +85,7 @@ func loadFont(ctx context.Context) (*truetype.Font, error) {
 
 		fontCache, err = truetype.Parse(fontBytes)
 		if err != nil {
-			err := fmt.Errorf("failed to parse font: %v", err)
+			err = fmt.Errorf("failed to parse font: %v", err)
 			log.Error().Err(err).Msg("failed to parse font data")
 			return nil, err
 		}
